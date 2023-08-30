@@ -16,7 +16,7 @@
     --very-dark-blue: hsl(240, 100%, 5%);
 }
 #menu-mobile{display: none;}
-.open-menu-icon{display: none;}
+#open-menu-icon{display: none;}
 body{
     margin: 0px;
     font-family: 'main-font';
