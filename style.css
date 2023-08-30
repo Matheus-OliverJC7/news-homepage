@@ -23,6 +23,9 @@ main{
     max-width: 1440px;
     margin: 0px auto;
 }
+a{
+    transition: 0.2s;
+}
 header{
     display: flex;
     flex-direction: row;
@@ -54,6 +57,9 @@ header{
     display: flex;
     justify-content: center;
 }
+#content{
+    max-width: 1000px;
+}
 #content img{
     width: 100%;
 }
@@ -74,7 +80,7 @@ header{
     align-items: start;
 }
 #content-legend{
-    width: 370px;
+    max-width: 370px;
 }
 #content-legend p{
     padding-bottom: 20px;
@@ -82,7 +88,7 @@ header{
 #content-info h1{
     color: var(--very-dark-blue);
     font-size: 3em;
-    width: 480px;
+    max-width: 480px;
     margin-top: 0px;
     font-family: 'main-font-bold';
 }
@@ -129,16 +135,8 @@ header{
     display: flex;
 }
 #others-articles img{
-    width: 30%;
-    height: 90%;
-}
-.top-laptops{
-    width: 50%;
-    height: 90%;
-}
-.gaming-growth{
-    width: 50%;
-    height: 90%;
+    width: 130px;
+    height: 200px;
 }
 .content-article{
     justify-content: space-between;
