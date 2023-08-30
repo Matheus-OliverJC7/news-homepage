@@ -15,6 +15,8 @@
     --dark-grayish-blue: hsl(236, 13%, 42%);
     --very-dark-blue: hsl(240, 100%, 5%);
 }
+#menu-mobile{display: none;}
+.open-menu-icon{display: none;}
 body{
     margin: 0px;
     font-family: 'main-font';
@@ -81,6 +83,7 @@ header{
 }
 #content-legend{
     max-width: 370px;
+    padding-left: 1rem;
 }
 #content-legend p{
     padding-bottom: 20px;
@@ -96,7 +99,6 @@ header{
     background-color: var(--very-dark-blue);
     color: var(--off-white);
     margin-left: 1rem;
-    max-width: 350px;
     padding: 1rem;
 }
 #adicional h2{
@@ -172,4 +174,94 @@ header{
 }
 .attribution a:hover{
     opacity: 1;
+}
+.open{display: block;}
+.close{display: none;}
+@media (max-width: 1230px) {
+    #section-1{
+        display: block;
+    }
+    #content{
+        margin: auto;
+    }
+    #adicional{
+        margin: 3rem auto;
+    }
+    #others-articles {
+        justify-content: space-around;
+    }
+    #others-articles li{
+        flex-direction: column;
+        max-width: 250px;
+    }
+    #others-articles img {
+        width: 100%;
+    }
+}
+@media (max-width: 800px) {
+    #open-menu-icon{
+        display: block;
+        position: relative;
+        right: 2.4rem;
+    }
+    #menu-mobile{
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0px;
+        background-color: var(--off-white);
+        width: 50vw;
+        height: 100vh;
+    }
+    #menu-mobile-list{
+        list-style: none;
+        position: relative;
+        top: 100px;
+        padding-left: 1rem;
+    }
+    #menu-mobile-list li{
+        margin-bottom: 2rem;
+    }
+    #menu-mobile-list a{
+        text-decoration: none;
+        color: var(--very-dark-blue);
+        font-family: 'main-font-bold';
+        font-weight: 700;
+    }
+    #menu-mobile-list a:active{
+        color: var(--soft-red);
+    }
+    #close-menu-icon{
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+    #content img{
+        height: 400px;
+    }
+    #content-info{
+        flex-direction: column;
+    }
+    #content-info h1{
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+    #content-legend{
+        padding-left: 0rem;
+    }
+    #nav-list{
+        display: none;
+    }
+    #others-articles {
+        flex-direction: column;
+    }
+    #others-articles li{
+        flex-direction: row;
+        margin-bottom: 3rem;
+        max-width: 400px;
+        padding: 0px;
+    }
+    #others-articles img{
+        width: 50%;
+    }
 }

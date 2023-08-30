@@ -6,6 +6,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">  
   <link rel="stylesheet" href="style.css"/>
   <title>Frontend Mentor | News homepage</title>
+  <script src="script.js"></script>
 </head>
 <body>
 <main>
@@ -19,11 +20,23 @@
         <li><a href="#">Trending</a></li>
         <li><a href="#">Categories</a></li>
       </ul>
+      <img id="open-menu-icon" src="images/icon-menu.svg" onclick="openMenu()"/>
+    </nav>
+    <nav id="menu-mobile">
+      <img id="close-menu-icon" src="images/icon-menu-close.svg" onclick="closeMenu()"/>
+      <ul id="menu-mobile-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">New</a></li>
+        <li><a href="#">Popular</a></li>
+        <li><a href="#">Trending</a></li>
+        <li><a href="#">Categories</a></li>
+      </ul>
     </nav>
   </header>
   <section id="section-1">
     <article id="content">
       <picture>
+        <source media="(max-width: 800px)" srcset="images/image-web-3-mobile.jpg"/>
         <img src="images/image-web-3-desktop.jpg"/>
       </picture>
 
