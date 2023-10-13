@@ -162,6 +162,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: end;
+    flex-direction: row;
     text-align: center;
     height: 100px;
 }
@@ -175,8 +176,6 @@ header{
 .attribution a:hover{
     opacity: 1;
 }
-.open{display: block;}
-.close{display: none;}
 @media (max-width: 1230px) {
     #section-1{
         display: block;
@@ -263,5 +262,14 @@ header{
     }
     #others-articles img{
         width: 50%;
+    }
+}
+@media (max-width: 534px) {
+    .attribution p{
+        display: flex;
+        flex-direction: column;
+    }
+    .attribution span{
+        padding: 8px 0px;
     }
 }
