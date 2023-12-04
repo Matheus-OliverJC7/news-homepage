@@ -6,12 +6,11 @@
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">  
   <link rel="stylesheet" href="style.css"/>
   <title>Frontend Mentor | News homepage</title>
-  <script src="script.js"></script>
 </head>
 <body>
   <header>
     <div id="logo"></div>
-    <nav>
+    <nav id="desktop-menu">
       <ul id="nav-list">
         <li><a href="#">Home</a></li>
         <li><a href="#">New</a></li>
@@ -19,10 +18,12 @@
         <li><a href="#">Trending</a></li>
         <li><a href="#">Categories</a></li>
       </ul>
-      <img id="open-menu-icon" src="images/icon-menu.svg" onclick="openMenu()"/>
     </nav>
+    <img id="open-menu-icon" src="images/icon-menu.svg" onclick="openMenu()"/>
     <nav id="menu-mobile">
-      <img id="close-menu-icon" src="images/icon-menu-close.svg" onclick="closeMenu()"/>
+      <div id="close-menu-div">
+        <img id="close-menu-icon" src="images/icon-menu-close.svg" onclick="closeMenu()"/>
+      </div>
       <ul id="menu-mobile-list">
         <li><a href="#">Home</a></li>
         <li><a href="#">New</a></li>
@@ -32,66 +33,66 @@
       </ul>
     </nav>
   </header>
-<main>
+  <main>
     <section id="section1">
       <section id="main-content">
-          <picture>
-            <source media="(max-width: 1239px)" srcset="images/image-web-3-mobile.jpg"/>
-            <img src="images/image-web-3-desktop.jpg"/>
-          </picture>
-          <div id="content-text">
-            <h1>The Bright<br/>Future of<br/>Web3.0?</h1>
-              <div id="content-info">
-                <p>
-                  We dive into the next evolution of the web that claims to put the power of the     platforms back into the hands of the people.
-                  But is it really fulfilling its promise?
-                </p>
-                  <a href="#" id="btn-read-more">Read More</a>
-              </div>
+        <picture>
+          <source media="(max-width: 1239px)" srcset="images/image-web-3-mobile.jpg"/>
+          <img src="images/image-web-3-desktop.jpg"/>
+        </picture>
+        <div id="content-text">
+          <h1>The Bright<br/> Future of<br/> Web3.0?</h1>
+          <div id="content-info">
+            <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
+            <a href="#" id="btn-read-more">Read More</a>
           </div>
+        </div>
       </section>
       <section id="aside">
         <h1>New</h1>
-            <h2><a href="#">Hydrogen VS Electric Cars</a></h2>
-            <p>Will hydrogen-fueled cars ever catch up<br/>to EVs?</p>
-            <hr>
-            <h2><a href="#">The Downsides of AI Artistry</a></h2>
-            <p>What are the possible adverse effects of<br/>on-demand AI image generation?</p>
-            <hr>
-            <h2><a href="#">Is VC Funding Drying Up?</a></h2>
-            <p>Private funding by VC firms is down 50%<br/>YOY. We take a look at what that means.</p>
+        <h2><a href="#">Hydrogen VS Electric Cars</a></h2>
+        <p>Will hydrogen-fueled cars ever catch up<br/>to EVs?</p>
+        <hr>
+        <h2><a href="#">The Downsides of AI Artistry</a></h2>
+        <p>What are the possible adverse effects of<br/>on-demand AI image generation?</p>
+        <hr>
+        <h2><a href="#">Is VC Funding Drying Up?</a></h2>
+        <p>Private funding by VC firms is down 50%<br/>YOY. We take a look at what that means.</p>
       </section>
     </section>
     <section id="section2">
-        <div class="div-link">
-          <img src="images/image-retro-pcs.jpg"/>
-          <div class="div-info">
-            <h1>01</h1>
-            <a href="#">Reviving Retro PCs</a>
-            <p>What happens when old PCs are given modern upgrades?</p>
-          </div>
+      <div class="div-link">
+        <img src="images/image-retro-pcs.jpg"/>
+        <div class="div-info">
+          <h1>01</h1>
+          <a href="#">Reviving Retro PCs</a>
+          <p>What happens when old PCs are given modern upgrades?</p>
         </div>
-        <div class="div-link">
-          <img src="images/image-top-laptops.jpg">
-          <div class="div-info">
-            <h1>02</h1>
-            <a href="#">Top 10 Laptops of 2022</a>
-            <p>Our best picks for various needs and budgets.</p>
-          </div>
+      </div>
+      <div class="div-link">
+        <img src="images/image-top-laptops.jpg">
+        <div class="div-info">
+          <h1>02</h1>
+          <a href="#">Top 10 Laptops of 2022</a>
+          <p>Our best picks for various needs and budgets.</p>
         </div>
-        <div class="div-link">
-          <img src="images/image-gaming-growth.jpg">
-          <div class="div-info">
-            <h1>03</h1>
-            <a href="#">The Growth of Gaming</a>
-            <p>How the pandemic has spaked fresh opportunities.</p>
-          </div>
+      </div>
+      <div class="div-link">
+        <img src="images/image-gaming-growth.jpg">
+        <div class="div-info">
+          <h1>03</h1>
+          <a href="#">The Growth of Gaming</a>
+          <p>How the pandemic has spaked fresh opportunities.</p>
         </div>
+      </div>
     </section>
   </main>
   <footer class="attribution">
     <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>
     <p>Coded by <a href="#">Matheus de Oliveira</a>.</p>
   </footer>
+
+  <script src="script.js"></script>
+
 </body>
 </html>

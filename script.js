@@ -1,8 +1,7 @@
-function openMenu() {
-    let menu = document.querySelector('#menu-mobile')
+const menu = document.querySelector('#menu-mobile');
+function openMenu(){
     menu.style.display = 'block'
 }
-function closeMenu() {
-    let menu = document.querySelector('#menu-mobile')
-    menu.style.display = 'none'
+function closeMenu(){
+    menu.style.display ='none'
 }
