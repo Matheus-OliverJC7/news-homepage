@@ -19,10 +19,10 @@
         <li><a href="#">Categories</a></li>
       </ul>
     </nav>
-    <img id="open-menu-icon" src="images/icon-menu.svg" onclick="openMenu()"/>
+    <img id="open-menu-icon" src="images/icon-menu.svg"/>
     <nav id="menu-mobile">
       <div id="close-menu-div">
-        <img id="close-menu-icon" src="images/icon-menu-close.svg" onclick="closeMenu()"/>
+        <img id="close-menu-icon" src="images/icon-menu-close.svg"/>
       </div>
       <ul id="menu-mobile-list">
         <li><a href="#">Home</a></li>
@@ -92,7 +92,11 @@
     <p>Coded by <a href="#">Matheus de Oliveira</a>.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    const menu = document.querySelector('#menu-mobile');
+    const openMenu = document.querySelector('#open-menu-icon').addEventListener('click', function(){menu.style.display = 'block'});
+    const closeMenu = document.querySelector('#close-menu-icon').addEventListener('click', function(){menu.style.display = 'none'});
+  </script>
 
 </body>
 </html>
