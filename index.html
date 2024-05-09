@@ -33,33 +33,43 @@
     </nav>
   </header>
   <main>
-    <article>
+    <article id="about-and-new">
       <section id="container-about">
         <picture>
-          <source media="(max-width: 1239px)" srcset="images/image-web-3-mobile.jpg"/>
+          <source media="(max-width: 1024px)" srcset="images/image-web-3-mobile.jpg"/>
           <img src="images/image-web-3-desktop.jpg"/>
         </picture>
-        <div class="about">
+        <div class="article-about">
           <h1>The Bright<br/> Future of<br/> Web3.0?</h1>
-          <div class="about-text">
+          <div class="text-about">
             <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
-            <a href="#" class="btn-read-more">Read More</a>
+            <a class="btn-read-more">Read More</a>
           </div>
         </div>
       </section>
       <aside id="container-new">
         <h1>New</h1>
-        <h2><a href="#">Hydrogen VS Electric Cars</a></h2>
-        <p>Will hydrogen-fueled cars ever catch up<br/>to EVs?</p>
-        <hr>
-        <h2><a href="#">The Downsides of AI Artistry</a></h2>
-        <p>What are the possible adverse effects of<br/>on-demand AI image generation?</p>
-        <hr>
-        <h2><a href="#">Is VC Funding Drying Up?</a></h2>
-        <p>Private funding by VC firms is down 50%<br/>YOY. We take a look at what that means.</p>
+
+        <div class="new-link-container">
+          <div class="new-link">
+            <h2><a>Hydrogen VS Eletric Cars</a></h2>
+            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+          </div>
+          <hr/>
+          <div class="new-link">
+            <h2><a>The Downsides of AI Artistry</a></h2>
+            <p>What are the possible adverse effects of<br/>on-demand AI image generation?</p>
+          </div>
+          <hr/>
+          <div class="new-link">
+            <h2><a>Is VC Funding Drying Up?</a></h2>
+            <p>Private funding by VC firms is down 50%<br/>YOY. We take a look at what that means.</p>
+          </div>
+        </div>
+
       </aside>
     </article>
-    <section id="more-articles">
+    <!--<section id="more-articles">
       <div class="article-link">
         <img src="images/image-retro-pcs.jpg"/>
         <div class="article-info">
@@ -89,13 +99,23 @@
   <footer class="attribution">
     <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="frontendmentor-link">frontendmentor</a>.</p>
     <p>Coded by <a href="https://www.github.com/matheusoliveirajc" target="_blank" class="dev-link">Matheus de Oliveira</a></p>
-  </footer>
+  </footer>-->
   <script>
     function openMenu(){
+      document.body.classList.toggle('blockScroll');
       let menu = document.querySelector('.mobile-menu');
       menu.classList.toggle('open-menu');
       let overlay = document.querySelector('.overlay');
       overlay.classList.toggle('show-overlay');
+      window.addEventListener('click', function(event){
+        let isClickMenu = menu.contains(event.target);
+        let isClickIcon = document.querySelector('.open-menu-icon').contains(event.target);
+        if(!isClickMenu && !isClickIcon){
+          document.body.classList.remove('blockScroll');
+          menu.classList.remove('open-menu');
+          overlay.classList.remove('show-overlay');
+        }
+      });
     }
     document.querySelector('.open-menu-icon').addEventListener('click', openMenu);
     document.querySelector('.close-menu-icon').addEventListener('click', openMenu);
