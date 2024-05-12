@@ -36,11 +36,11 @@
     <article id="about-and-new">
       <section id="container-about">
         <picture>
-          <source media="(max-width: 1024px)" srcset="images/image-web-3-mobile.jpg"/>
+          <source media="(max-width: 800px)" srcset="images/image-web-3-mobile.jpg"/>
           <img src="images/image-web-3-desktop.jpg"/>
         </picture>
         <div class="article-about">
-          <h1>The Bright<br/> Future of<br/> Web3.0?</h1>
+          <h1>The Bright<br/> Future of<br/> Web 3.0?</h1>
           <div class="text-about">
             <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
             <a class="btn-read-more">Read More</a>
@@ -69,56 +69,37 @@
 
       </aside>
     </article>
-    <!--<section id="more-articles">
-      <div class="article-link">
+    <section id="more-articles">
+      <div class="article-div">
         <img src="images/image-retro-pcs.jpg"/>
-        <div class="article-info">
+        <div class="article-description">
           <h1>01</h1>
-          <a href="#">Reviving Retro PCs</a>
+          <a>Reviving Retro PCs</a>
           <p>What happens when old PCs are given modern upgrades?</p>
         </div>
       </div>
-      <div class="article-link">
+      <div class="article-div">
         <img src="images/image-top-laptops.jpg">
-        <div class="article-info">
+        <div class="article-description">
           <h1>02</h1>
-          <a href="#">Top 10 Laptops of 2022</a>
+          <a>Top 10 Laptops of 2022</a>
           <p>Our best picks for various needs and budgets.</p>
         </div>
       </div>
-      <div class="article-link">
+      <div class="article-div">
         <img src="images/image-gaming-growth.jpg">
-        <div class="article-info">
+        <div class="article-description">
           <h1>03</h1>
-          <a href="#">The Growth of Gaming</a>
+          <a>The Growth of Gaming</a>
           <p>How the pandemic has spaked fresh opportunities.</p>
         </div>
       </div>
     </section>
   </main>
-  <footer class="attribution">
+  <footer>
     <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="frontendmentor-link">frontendmentor</a>.</p>
-    <p>Coded by <a href="https://www.github.com/matheusoliveirajc" target="_blank" class="dev-link">Matheus de Oliveira</a></p>
-  </footer>-->
-  <script>
-    function openMenu(){
-      document.body.classList.toggle('blockScroll');
-      let menu = document.querySelector('.mobile-menu');
-      menu.classList.toggle('open-menu');
-      let overlay = document.querySelector('.overlay');
-      overlay.classList.toggle('show-overlay');
-      window.addEventListener('click', function(event){
-        let isClickMenu = menu.contains(event.target);
-        let isClickIcon = document.querySelector('.open-menu-icon').contains(event.target);
-        if(!isClickMenu && !isClickIcon){
-          document.body.classList.remove('blockScroll');
-          menu.classList.remove('open-menu');
-          overlay.classList.remove('show-overlay');
-        }
-      });
-    }
-    document.querySelector('.open-menu-icon').addEventListener('click', openMenu);
-    document.querySelector('.close-menu-icon').addEventListener('click', openMenu);
-  </script>
+    <p>Coded by <a href="https://www.github.com/matheusoliveirajc" target="_blank" class="dev-link">Matheus de Oliveira</a>.</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
