@@ -1,18 +1,18 @@
+const mobileMenu = document.querySelector('.mobile-menu');
 function openMenu(){
-    document.body.classList.toggle('blockScroll');
-    let menu = document.querySelector('.mobile-menu');
-    menu.classList.toggle('open-menu');
-    let overlay = document.querySelector('.overlay');
-    overlay.classList.toggle('show-overlay');
-    window.addEventListener('click', function(event){
-      let isClickMenu = menu.contains(event.target);
-      let isClickIcon = document.querySelector('.open-menu-icon').contains(event.target);
-      if(!isClickMenu && !isClickIcon){
-        document.body.classList.remove('blockScroll');
-        menu.classList.remove('open-menu');
-        overlay.classList.remove('show-overlay');
-      }
-    });
+  document.body.classList.add('blockScroll');
+  document.querySelector('.overlay').classList.add('show-overlay');
+  mobileMenu.classList.add('open-menu');
+}
+function closeMenu(event){
+  let isClickMenu = mobileMenu.contains(event.target);
+  let isClickOpen = document.querySelector('.open-menu-icon').contains(event.target);
+  let isClickClose = document.querySelector('.close-menu-icon').contains(event.target);
+  if(!isClickMenu && !isClickOpen || isClickClose){
+    document.body.classList.remove('blockScroll');
+    document.querySelector('.overlay').classList.remove('show-overlay');
+    mobileMenu.classList.remove('open-menu');
   }
-  document.querySelector('.open-menu-icon').addEventListener('click', openMenu);
-  document.querySelector('.close-menu-icon').addEventListener('click', openMenu);
+}
+document.querySelector('.open-menu-icon').addEventListener('click', openMenu);
+window.addEventListener('click', closeMenu);
