@@ -181,7 +181,7 @@ footer{
         padding-bottom: 50px;
     }
 }
-@media(max-width: 1024px){
+@media(max-width: 900px){
     .desktop-menu{display: none;}
     .open-menu-icon{display: block;}
     .mobile-menu{
@@ -200,7 +200,7 @@ footer{
         visibility: hidden;
         transition: visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
     }
-    .mobile-menu .close-menu-icon{
+    .close-menu-icon{
         display: block;
         float: right;
     }

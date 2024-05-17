@@ -15,4 +15,4 @@ function closeMenu(event){
   }
 }
 document.querySelector('.open-menu-icon').addEventListener('click', openMenu);
-window.addEventListener('click', closeMenu);
+document.addEventListener('click', closeMenu);
